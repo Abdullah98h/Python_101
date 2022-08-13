@@ -1,0 +1,44 @@
+print("Welcome to My Contact Book")
+print("Enter 1 to Check by number")
+print("Enter 2 to Check by name")
+print("Enter 3 to Register new name")
+n = input("?: ")
+names = ["Amal", "Mohammed", "Khadijah", "Abdullah", "Rawan", "Faisal", "Layla"]
+numbers = ["1111111111", "2222222222", "333333333", "4444444444", "5555555555", "6666666666", "7777777777"]
+
+
+if n == "1":
+   number1 = input("Enter the number: ")
+
+   if number1 in numbers:
+       index = numbers.index(number1)
+       name = names[index]
+       print("Name: " + name + "Phone Number:" + number1)
+   else:
+       print("Sorry, the number is not found")
+
+
+
+elif n == "2":
+    number1 = input("Enter the name: ")
+
+    if number1 in names:
+        index = names.index(number1)
+        phone_number = numbers[index]
+        print("Name: "+ number1 +" Phone Number: "+phone_number )
+    else:
+        print("Sorry, the number is not found")
+
+
+
+
+elif n == "3":
+    name = input("Name: ")
+    phone_number = input("Phone Number: ")
+    names.append(name)
+    numbers.append(phone_number)
+    print("Name: "+name+ " Phone Number: "+ phone_number)
+    print(names, numbers)
+
+else:
+    print("This is invaild number")
